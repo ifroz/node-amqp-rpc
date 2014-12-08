@@ -35,7 +35,8 @@ function rpc(opt)   {
  */
 
 rpc.prototype.generateQueueName = function(type)    {
-    return /*'njsListener:' +*/ os.hostname() + ':pid' + process.pid + ':' + type;
+    return /*'njsListener:' +*/ os.hostname() + ':pid' + process.pid + ':' + type + ':' + 
+      Math.random().toString(16).split('.')[1];
 }
 
 
